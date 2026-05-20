@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  display: flex;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: #020617;
+  padding: 20px;
+  position: fixed;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+  color: #38bdf8;
+}
+
+.sidebar a {
+  display: block;
+  color: #94a3b8;
+  text-decoration: none;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.sidebar a:hover {
+  background: #1e293b;
+  color: white;
+}
+
+.main {
+  margin-left: 220px;
+  padding: 30px;
+  width: 100%;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 28px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #00000050;
+  max-width: 400px;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background: #0f172a;
+  color: white;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  background: #38bdf8;
+  color: #020617;
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  background: #0f172a;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+.badge {
+  background: gold;
+  color: black;
+  padding: 3px 6px;
+  border-radius: 4px;
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+header p {
+  color: #94a3b8;
+  margin-top: 5px;
+}
+
+.card ul {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-height: 500px;
+}
+
+.card-content {
+  overflow-y: auto;
+  flex: 1;
+  margin-top: 10px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.filtro {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}

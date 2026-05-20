@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="sidebar">
+    <h2>Dashboard</h2>
+
+    <a href="#" onclick="listarReceitas()">Receitas</a>
+    <a href="#" onclick="carregarCategoriasFiltro()">Categorias</a>
+    <a href="#" onclick="logout()">Sair</a>
+  </div>
+
+  <div class="main">
+
+    <header>
+      <h1>Dashboard de Receitas</h1>
+      <p>Gerencie suas receitas</p>
+    </header>
+
+    <div class="grid">
+
+      <div class="card">
+        <h2>Filtrar por Categoria</h2>
+
+        <select id="filtroCategoria" onchange="filtrarPorCategoria()">
+          <option value="">Todas</option>
+        </select>
+
+        <button onclick="limparFiltro()">Limpar filtro</button>
+      </div>
+
+      <div class="card">
+        <h2>Minhas Habilidades</h2>
+        <select id="listaHabilidadesDisponiveis">
+        </select>
+        <input type="number" id="nivelHabilidade" min="0" max="10" placeholder="Nível (0 a 10)">
+        <button onclick="vincularHabilidade()">Vincular Habilidade</button>
+
+        <div class="card-content">
+          <ul id="minhasHabilidades"></ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Criar Receita</h2>
+        <input id="nome" placeholder="Nome da receita">
+        <input id="descricao" placeholder="Descrição">
+        <input id="link" placeholder="Link">
+
+        <label for="categoriasSelect">Selecione as categorias:</label>
+        <select id="categoriasSelect" multiple style="height: 100px; margin-bottom: 10px;"></select>
+
+        <button onclick="criarReceita()">Criar</button>
+      </div>
+
+      <div class="card">
+        <h2>Receitas</h2>
+
+        <button onclick="listarReceitas()">Atualizar</button>
+
+        <div class="card-content">
+          <ul id="lista"></ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+  <script>
+    verificarAuth();
+    listarReceitas();
+    carregarCategoriasFiltro();
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Painel Admin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="sidebar">
+    <h2>Admin</h2>
+
+    <a href="#" onclick="listarUsuarios()">Usuários</a>
+    <a href="#" onclick="listarReceitasAdmin()">Receitas</a>
+    <a href="#" onclick="listarCategorias()">Categorias</a>
+    <a href="#" onclick="logout()">Sair</a>
+  </div>
+
+  <div class="main">
+
+    <header>
+      <h1>Painel Administrativo</h1>
+      <p>Gerencie o sistema completo</p>
+    </header>
+
+    <div class="grid">
+
+      <div class="card">
+        <h2>Gerenciar Usuários (Alunos)</h2>
+        <input id="novoNomeUsuario" placeholder="Nome do Aluno">
+        <input id="novoEmailUsuario" placeholder="Email">
+        <input id="novaSenhaUsuario" type="password" placeholder="Senha">
+        <button onclick="cadastrarAlunoPorAdmin()">Cadastrar Aluno</button>
+        <button onclick="listarUsuarios()">Listar</button>
+        <div class="card-content">
+          <ul id="usuarios"></ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Gerenciar Habilidades Disponíveis</h2>
+        <input id="nomeHabilidadeAdmin" placeholder="Ex: Salgados, Sobremesas...">
+        <button onclick="criarHabilidade()">Cadastrar Habilidade</button>
+        <button onclick="listarHabilidadesAdmin()">Listar Todas</button>
+        <div class="card-content">
+          <ul id="listaHabilidadesAdmin"></ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Receitas</h2>
+
+        <button onclick="listarReceitasAdmin()">Listar</button>
+
+        <div class="card-content">
+          <ul id="receitasAdmin"></ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Categorias</h2>
+
+        <input id="nomeCategoria" placeholder="Nova categoria">
+        <button onclick="criarCategoria()">Criar</button>
+        <button onclick="listarCategorias()">Listar</button>
+
+        <div class="card-content">
+          <ul id="listaCategorias"></ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    verificarAdmin();
+    listarUsuarios();
+    listarReceitasAdmin();
+  </script>
+
+</body>
+
+</html>
